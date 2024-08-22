@@ -1,8 +1,15 @@
+// import { Link } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
+
 const NavBar = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl text-white">Dukan Wala</a>
+        <a className="btn btn-ghost text-xl text-white" href="/">Dukan Wala</a>
       </div>
       <div className="flex-none">
         <div className="dropdown dropdown-end">
@@ -35,7 +42,7 @@ const NavBar = () => {
               <span className="text-info">Subtotal: $999</span>{" "}
               {/* total price here comming fro the context api*/}
               <div className="card-actions">
-                <button className="btn btn-primary btn-block">View cart</button>
+                <button onClick={() => navigate("/cart")} className="btn btn-primary btn-block">View cart</button>
               </div>
             </div>
           </div>
