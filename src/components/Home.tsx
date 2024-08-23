@@ -74,7 +74,7 @@ const Home: React.FC = () => {
                 >
                   <figure className="px-4 pt-4">
                     <img
-                      src={item.images?.[0]}
+                      src={item.category?.image}
                       alt={item.title}
                       className="w-full h-48 object-cover rounded-md"
                     />
